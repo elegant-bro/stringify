@@ -1,0 +1,16 @@
+image: php:7.1-cli
+
+cache:
+  key: composer
+  paths:
+    - vendor
+
+before_script:
+  - wget https://getcomposer.org/installer
+  - php installer --install-dir=/usr/local/bin/ --filename=composer
+  - rm installer
+  - composer install
+
+test:
+  script:
+    - ./vendor/bin/phpunit
