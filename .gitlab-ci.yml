@@ -6,6 +6,7 @@ cache:
     - vendor
 
 before_script:
+  - apk update && apk add ca-certificates wget && update-ca-certificates
   - wget https://getcomposer.org/installer
   - php installer --install-dir=/usr/local/bin/ --filename=composer
   - rm installer
