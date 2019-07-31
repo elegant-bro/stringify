@@ -14,11 +14,6 @@ final class Just implements Stringify
      */
     private $value;
 
-    public static function from(string $value): Just
-    {
-        return new Just($value);
-    }
-
     public function __construct(string $value)
     {
         $this->value = $value;

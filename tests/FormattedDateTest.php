@@ -7,12 +7,14 @@
 namespace ElegantBro\Stringify\Tests;
 
 
+use DateTimeImmutable;
+use DateTimeZone;
+use ElegantBro\Stringify\FormattedDate;
 use ElegantBro\Stringify\Just;
-use ElegantBro\Stringify\Trimmed;
 use Exception;
 use PHPUnit\Framework\TestCase;
 
-class TrimmedTest extends TestCase
+class FormattedDateTest extends TestCase
 {
     /**
      * @throws Exception
@@ -20,17 +22,10 @@ class TrimmedTest extends TestCase
     public function testAsString(): void
     {
         $this->assertEquals(
-            'bar',
-            Trimmed::defaultChars(
-                new Just(" \t\n\rbar\0\x0B")
-            )->asString()
-        );
-
-        $this->assertEquals(
-            'bar',
-            (new Trimmed(
-                new Just('foobar oof'),
-                new Just('fo ')
+            '2000-01-02T13:23:45+00:00',
+            (new FormattedDate(
+                new DateTimeImmutable('2000-01-02 13:23:45', new DateTimeZone('UTC')),
+                new Just(DATE_ATOM)
             ))->asString()
         );
     }

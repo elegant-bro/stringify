@@ -19,7 +19,9 @@ final class HashAlgo implements Stringify
 
     public static function md5(): HashAlgo
     {
-        return new HashAlgo(Just::from('md5'));
+        return new HashAlgo(
+            new Just('md5')
+        );
     }
 
     public function __construct(Stringify $algo)

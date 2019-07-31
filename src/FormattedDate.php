@@ -7,24 +7,25 @@
 namespace ElegantBro\Stringify;
 
 
+use DateTimeInterface;
 use Exception;
 
-final class Formatted implements Stringify
+class FormattedDate implements Stringify
 {
+    /**
+     * @var DateTimeInterface
+     */
+    private $date;
+
     /**
      * @var Stringify
      */
     private $format;
 
-    /**
-     * @var array
-     */
-    private $args;
-
-    public function __construct(Stringify $format, ...$args)
+    public function __construct(DateTimeInterface $date, Stringify $format)
     {
+        $this->date = $date;
         $this->format = $format;
-        $this->args = $args;
     }
 
     /**
@@ -33,9 +34,8 @@ final class Formatted implements Stringify
      */
     public function asString(): string
     {
-        return sprintf(
-            $this->format->asString(),
-            ...$this->args
+        return $this->date->format(
+            $this->format->asString()
         );
     }
 }

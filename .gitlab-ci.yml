@@ -1,4 +1,4 @@
-image: php:7.1-cli
+image: php:7.1-cli-alpine
 
 cache:
   key: composer
@@ -6,7 +6,6 @@ cache:
     - vendor
 
 before_script:
-  - bash apk update && apk add ca-certificates wget && update-ca-certificates
   - wget https://getcomposer.org/installer
   - php installer --install-dir=/usr/local/bin/ --filename=composer
   - rm installer

@@ -8,11 +8,11 @@ namespace ElegantBro\Stringify\Tests;
 
 
 use ElegantBro\Stringify\Just;
-use ElegantBro\Stringify\Trimmed;
+use ElegantBro\Stringify\LeftTrimmed;
 use Exception;
 use PHPUnit\Framework\TestCase;
 
-class TrimmedTest extends TestCase
+class LeftTrimmedTest extends TestCase
 {
     /**
      * @throws Exception
@@ -20,17 +20,17 @@ class TrimmedTest extends TestCase
     public function testAsString(): void
     {
         $this->assertEquals(
-            'bar',
-            Trimmed::defaultChars(
-                new Just(" \t\n\rbar\0\x0B")
+            "bar\0\x0B",
+            LeftTrimmed::defaultChars(
+                new Just(" \t\n\r\0\x0Bbar\0\x0B")
             )->asString()
         );
 
         $this->assertEquals(
-            'bar',
-            (new Trimmed(
-                new Just('foobar oof'),
-                new Just('fo ')
+            'barfoo',
+            (new LeftTrimmed(
+                new Just('foobarfoo'),
+                new Just('fo')
             ))->asString()
         );
     }

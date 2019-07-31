@@ -9,7 +9,7 @@ namespace ElegantBro\Stringify;
 
 use Exception;
 
-final class Trimmed implements Stringify
+final class RightTrimmed implements Stringify
 {
     /**
      * @var Stringify
@@ -21,9 +21,9 @@ final class Trimmed implements Stringify
      */
     private $chars;
 
-    public static function defaultChars(Stringify $str): Trimmed
+    public static function defaultChars(Stringify $str): RightTrimmed
     {
-        return new Trimmed(
+        return new RightTrimmed(
             $str,
             new Just(" \t\n\r\0\x0B")
         );
@@ -41,7 +41,7 @@ final class Trimmed implements Stringify
      */
     public function asString(): string
     {
-        return trim(
+        return rtrim(
             $this->str->asString(),
             $this->chars->asString()
         );

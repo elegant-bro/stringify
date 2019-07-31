@@ -23,7 +23,7 @@ class HashedTest extends TestCase
         $this->assertEquals(
             'acbd18db4cc2f85cedef654fccc4a4d8',
             (new Hashed(
-                Just::from('foo'),
+                new Just('foo'),
                 HashAlgo::md5()
             ))->asString()
         );

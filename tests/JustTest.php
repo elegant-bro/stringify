@@ -19,6 +19,5 @@ class JustTest extends TestCase
     public function testAsString(): void
     {
         $this->assertEquals('foo', (new Just('foo'))->asString());
-        $this->assertEquals('bar', Just::from('bar')->asString());
     }
 }
