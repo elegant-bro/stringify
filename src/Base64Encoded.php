@@ -7,14 +7,23 @@
 namespace ElegantBro\Stringify;
 
 
-final class EmptyStr implements Stringify
+final class Base64Encoded implements Stringify
 {
+    /**
+     * @var string
+     */
+    private $value;
+
+    public function __construct(string $value)
+    {
+        $this->value = $value;
+    }
 
     /**
      * @return string
      */
     public function asString(): string
     {
-        return '';
+        return base64_encode($this->value);
     }
 }
