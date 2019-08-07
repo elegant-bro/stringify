@@ -20,12 +20,12 @@
   },
   "autoload": {
     "psr-4": {
-      "ElegantBro\\Stringify\\": "src"
+      "ElegantBro\\Stringify\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ElegantBro\\Stringify\\Tests": "test"
+      "ElegantBro\\Stringify\\Tests\\": "tests/"
     }
   }
 }
