@@ -34,10 +34,10 @@ final class JsonEncoded implements Stringify
 
     public static function default($value): JsonEncoded
     {
-        return new JsonEncoded($value);
+        return new JsonEncoded($value, 0, 512);
     }
 
-    public function __construct($value, int $options = 0, int $depth = 512)
+    public function __construct($value, int $options, int $depth)
     {
         $this->value = $value;
         $this->options = $options;
