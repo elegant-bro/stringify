@@ -1,8 +1,22 @@
 {
   "name": "elegant-bro/stringify",
   "license": ["MIT"],
+  "authors": [
+    {
+      "name": "Pavel Stepanets",
+      "email": "pahhan.ne@gmail.com"
+    },
+    {
+      "name": "Dmitry Anikeev",
+      "email": "anikeev.dmitry@outlook.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "ext-json": "*"
+  },
   "require-dev": {
-    "phpunit/phpunit": "^7.0"
+    "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0 || ^8.0"
   },
   "autoload": {
     "psr-4": {
@@ -10,11 +24,8 @@
     }
   },
   "autoload-dev": {
-    "ElegantBro\\Stringify\\Tests": "test"
-  },
-  "config": {
-    "platform": {
-      "php": "7.1"
+    "psr-4": {
+      "ElegantBro\\Stringify\\Tests\\": "tests"
     }
   }
 }
