@@ -8,7 +8,11 @@ namespace ElegantBro\Stringify;
 
 
 use Exception;
-use JsonException;
+use RuntimeException;
+use function json_encode;
+use function json_last_error;
+use function json_last_error_msg;
+use function preg_match;
 
 final class JsonEncoded implements Stringify
 {
@@ -30,10 +34,10 @@ final class JsonEncoded implements Stringify
 
     public static function default($value): JsonEncoded
     {
-        return new JsonEncoded($value, 0, 512);
+        return new JsonEncoded($value);
     }
 
-    public function __construct($value, int $options, int $depth)
+    public function __construct($value, int $options = 0, int $depth = 512)
     {
         $this->value = $value;
         $this->options = $options;
@@ -46,8 +50,12 @@ final class JsonEncoded implements Stringify
      */
     public function asString(): string
     {
-        if (false === $result = json_encode($this->value, $this->options, $this->depth)) {
-            throw new JsonException(json_last_error_msg());
+        $result = json_encode($this->value, $this->options, $this->depth);
+        if (
+            (false === $result || 1 !== preg_match('/\S/', $result)) &&
+            JSON_ERROR_NONE !== json_last_error()
+        ) {
+            throw new RuntimeException(json_last_error_msg());
         }
 
         return $result;
