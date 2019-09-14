@@ -1,11 +1,12 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * @author Pavel Stepanets <pahhan.ne@gmail.com>
  * @author Artem Dekhtyar <m@artemd.ru>
  */
 
 namespace ElegantBro\Stringify;
-
 
 use Exception;
 use function substr;
@@ -42,7 +43,8 @@ final class SubOf implements Stringify
     public function asString(): string
     {
         return
-            false === ($sub =
+            false === (
+                $sub =
                 0 === $this->length ?
                     substr($this->str->asString(), $this->start) :
                     substr($this->str->asString(), $this->start, $this->length)
