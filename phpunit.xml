@@ -11,12 +11,11 @@
         </testsuite>
     </testsuites>
     <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true" addUncoveredFilesFromWhitelist="true">
+        <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./src</directory>
         </whitelist>
     </filter>
     <logging>
-        <log type="coverage-text" target="php://stdout" showUncoveredFiles="true"/>
         <log type="coverage-clover" target="coverage.xml" showUncoveredFiles="true"/>
     </logging>
 </phpunit>

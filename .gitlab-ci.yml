@@ -6,10 +6,7 @@ cache:
     - vendor
 
 before_script:
-  - wget https://getcomposer.org/installer
-  - php installer --install-dir=/usr/local/bin/ --filename=composer
-  - rm installer
-  - composer install
+  - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 
 test:
   script:
