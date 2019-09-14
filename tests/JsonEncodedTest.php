@@ -11,6 +11,7 @@ namespace ElegantBro\Stringify\Tests;
 use ElegantBro\Stringify\JsonEncoded;
 use Exception;
 use PHPUnit\Framework\TestCase;
+use RuntimeException;
 
 class JsonEncodedTest extends TestCase
 {
@@ -22,5 +23,12 @@ class JsonEncodedTest extends TestCase
         $this->assertEquals('[]', JsonEncoded::default([])->asString());
         $this->assertEquals('[1,"foo"]', JsonEncoded::default([1, 'foo'])->asString());
         $this->assertEquals('{"foo":"bar"}', JsonEncoded::default(['foo' => 'bar'])->asString());
+    }
+
+    public function testAsStringWithException(): void
+    {
+        $this->expectException(RuntimeException::class);
+
+        JsonEncoded::default("\x92")->asString();
     }
 }
