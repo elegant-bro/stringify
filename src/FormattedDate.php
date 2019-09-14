@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace ElegantBro\Stringify;
 
 use DateTimeInterface;
+use ElegantBro\Interfaces\Stringify;
 use Exception;
 
 class FormattedDate implements Stringify

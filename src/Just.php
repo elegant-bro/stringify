@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace ElegantBro\Stringify;
 
+use ElegantBro\Interfaces\Stringify;
+
 final class Just implements Stringify
 {
     /**

@@ -4,8 +4,47 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a38d1661157111d13302cd42606daea0",
-    "packages": [],
+    "content-hash": "98785955b2150ecdf5fae846de8d4ccc",
+    "packages": [
+        {
+            "name": "elegant-bro/interfaces",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elegant-bro/interfaces.git",
+                "reference": "506d6bd93e65a45769ef69c7fb36102f01521764"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elegant-bro/interfaces/zipball/506d6bd93e65a45769ef69c7fb36102f01521764",
+                "reference": "506d6bd93e65a45769ef69c7fb36102f01521764",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0 || ^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ElegantBro\\Interfaces\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pavel Stepanets",
+                    "email": "pahhan.ne@gmail.com"
+                }
+            ],
+            "time": "2019-09-10T16:59:31+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "composer/semver",

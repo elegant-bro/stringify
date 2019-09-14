@@ -8,8 +8,8 @@ declare(strict_types=1);
 
 namespace ElegantBro\Stringify\Tests;
 
+use ElegantBro\Interfaces\Stringify;
 use ElegantBro\Stringify\Cached;
-use ElegantBro\Stringify\Stringify;
 use Exception;
 use PHPUnit\Framework\TestCase;
 
