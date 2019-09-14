@@ -1,11 +1,12 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * @author Pavel Stepanets <pahhan.ne@gmail.com>
  * @author Artem Dekhtyar <m@artemd.ru>
  */
 
 namespace ElegantBro\Stringify;
-
 
 use Exception;
 
@@ -20,7 +21,9 @@ class Joined implements Stringify
     {
         return new Joined(
             ...array_map(
-                static function (string $s) { return new Just($s); },
+                static function (string $s) {
+                    return new Just($s);
+                },
                 $args
             )
         );
@@ -40,7 +43,9 @@ class Joined implements Stringify
         return (new Imploded(
             new EmptyStr(),
             array_map(
-                static function (Stringify $s) { return $s->asString(); },
+                static function (Stringify $s) {
+                    return $s->asString();
+                },
                 $this->args
             )
         ))->asString();

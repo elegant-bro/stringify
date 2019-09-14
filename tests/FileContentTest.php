@@ -1,11 +1,12 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * @author Pavel Stepanets <pahhan.ne@gmail.com>
  * @author Artem Dekhtyar <m@artemd.ru>
  */
 
 namespace ElegantBro\Stringify\Tests;
-
 
 use ElegantBro\Stringify\FileContent;
 use ElegantBro\Stringify\Just;
@@ -23,7 +24,7 @@ class FileContentTest extends TestCase
         $this->assertEquals(
             'foobar',
             (new FileContent(
-                new Just(__DIR__.'/fixtures/foobar.txt')
+                new Just(__DIR__ . '/fixtures/foobar.txt')
             ))->asString()
         );
     }
@@ -36,7 +37,7 @@ class FileContentTest extends TestCase
         $this->assertEquals(
             '',
             (new FileContent(
-                new Just(__DIR__.'/fixtures/empty.txt')
+                new Just(__DIR__ . '/fixtures/empty.txt')
             ))->asString()
         );
     }
@@ -48,7 +49,7 @@ class FileContentTest extends TestCase
     {
         $this->expectException(RuntimeException::class);
         (new FileContent(
-            new Just(__DIR__.'/fixtures/no.file')
+            new Just(__DIR__ . '/fixtures/no.file')
         ))->asString();
     }
 }

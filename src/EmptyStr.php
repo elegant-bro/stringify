@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * @author Pavel Stepanets <pahhan.ne@gmail.com>
  * @author Artem Dekhtyar <m@artemd.ru>
@@ -6,10 +8,8 @@
 
 namespace ElegantBro\Stringify;
 
-
 final class EmptyStr implements Stringify
 {
-
     /**
      * @return string
      */

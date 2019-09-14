@@ -1,11 +1,12 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * @author Pavel Stepanets <pahhan.ne@gmail.com>
  * @author Artem Dekhtyar <m@artemd.ru>
  */
 
 namespace ElegantBro\Stringify\Tests;
-
 
 use ElegantBro\Stringify\Imploded;
 use ElegantBro\Stringify\Just;
@@ -22,8 +23,8 @@ class ImplodedTest extends TestCase
         $this->assertEquals(
             'foo-bar',
             (new Imploded(
-                new Just('-')
-                , ['foo', 'bar']
+                new Just('-'),
+                ['foo', 'bar']
             ))->asString()
         );
 
