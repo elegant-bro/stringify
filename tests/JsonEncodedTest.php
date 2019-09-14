@@ -25,6 +25,9 @@ class JsonEncodedTest extends TestCase
         $this->assertEquals('{"foo":"bar"}', JsonEncoded::default(['foo' => 'bar'])->asString());
     }
 
+    /**
+     * @throws Exception
+     */
     public function testAsStringWithException(): void
     {
         $this->expectException(RuntimeException::class);
