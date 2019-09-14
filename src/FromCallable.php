@@ -2,6 +2,7 @@
 
 namespace ElegantBro\Stringify;
 
+use ElegantBro\Interfaces\Stringify;
 use Exception;
 
 final class FromCallable implements Stringify

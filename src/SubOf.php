@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace ElegantBro\Stringify;
 
+use ElegantBro\Interfaces\Stringify;
 use Exception;
 use function substr;
 
