@@ -10,34 +10,30 @@ namespace ElegantBro\Stringify;
 
 use ElegantBro\Interfaces\Stringify;
 use Exception;
+use RuntimeException;
 
-final class Formatted implements Stringify
+final class NotEmptyStr implements Stringify
 {
     /**
      * @var Stringify
      */
-    private $format;
+    private $origin;
 
-    /**
-     * @var array
-     */
-    private $args;
-
-    public function __construct(Stringify $format, ...$args)
+    public function __construct(Stringify $origin)
     {
-        $this->format = $format;
-        $this->args = $args;
+        $this->origin = $origin;
     }
 
     /**
-     * @return string
      * @throws Exception
+     * @return string
      */
     public function asString(): string
     {
-        return sprintf(
-            $this->format->asString(),
-            ...$this->args
-        );
+        if ('' === $this->origin->asString()) {
+            throw new RuntimeException('String must\'nt be empty!');
+        }
+
+        return $this->origin->asString();
     }
 }

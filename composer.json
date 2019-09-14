@@ -1,6 +1,8 @@
 {
   "name": "elegant-bro/stringify",
-  "license": ["MIT"],
+  "license": [
+    "MIT"
+  ],
   "authors": [
     {
       "name": "Pavel Stepanets",
@@ -13,10 +15,12 @@
   ],
   "require": {
     "php": ">=7.1",
-    "ext-json": "*"
+    "ext-json": "*",
+    "elegant-bro/interfaces": "^0.1.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0 || ^8.0"
+    "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0 || ^8.0",
+    "symplify/easy-coding-standard": "^6.0"
   },
   "autoload": {
     "psr-4": {
@@ -27,5 +31,12 @@
     "psr-4": {
       "ElegantBro\\Stringify\\Tests\\": "tests"
     }
+  },
+  "config": {
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true,
+    "optimize-autoloader": true
   }
 }

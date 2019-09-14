@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * @author Pavel Stepanets <pahhan.ne@gmail.com>
  * @author Artem Dekhtyar <m@artemd.ru>
@@ -6,7 +8,7 @@
 
 namespace ElegantBro\Stringify;
 
-
+use ElegantBro\Interfaces\Stringify;
 use Exception;
 use InvalidArgumentException;
 
@@ -37,7 +39,7 @@ final class HashAlgo implements Stringify
     {
         $str = $this->algo->asString();
         if (!in_array($str, hash_algos(), true)) {
-            throw new InvalidArgumentException('Unsupported algo '. $str);
+            throw new InvalidArgumentException('Unsupported algo ' . $str);
         }
 
         return $str;
