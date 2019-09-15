@@ -11,3 +11,4 @@ install:
 script:
   - vendor/bin/ecs --level psr12 check src
   - vendor/bin/phpunit
+  - php check-coverage.php coverage.xml 100

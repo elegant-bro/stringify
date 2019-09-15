@@ -19,6 +19,7 @@
     "elegant-bro/interfaces": "^0.1.0"
   },
   "require-dev": {
+    "ext-simplexml": "*",
     "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0 || ^8.0",
     "symplify/easy-coding-standard": "^6.0"
   },
