@@ -135,7 +135,7 @@ $connection->execute(
 This is very simple example but it reflects the common idea. By this approach you can create some kind of query
 builder but in elegant declarative way.
 
-#Tests
+# Tests
 Install dependencies
 
 `docker run --rm -ti -v $PWD:/app composer install`
@@ -143,3 +143,6 @@ Install dependencies
 Run tests
 
 `docker run --rm -ti -v $PWD:/app -w /app php:7.1-cli-alpine vendor/bin/phpunit`
+
+Test code style
+`docker run --rm -ti -v $(pwd):/app -w /app php:7.1-cli-alpine vendor/bin/ecs --level psr12 check src`

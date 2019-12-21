@@ -27,6 +27,7 @@
     "symfony/mime": "4.3.8"
   },
   "autoload": {
+    "files": ["src/functions.php"],
     "psr-4": {
       "ElegantBro\\Stringify\\": "src"
     }
