@@ -14,14 +14,17 @@
     }
   ],
   "require": {
-    "php": ">=7.1",
+    "php": "^7.1",
     "ext-json": "*",
     "elegant-bro/interfaces": "^0.1.0"
   },
   "require-dev": {
     "ext-simplexml": "*",
     "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0",
-    "symplify/easy-coding-standard": "^6.0"
+    "symplify/easy-coding-standard": "^6.0",
+    "symfony/cache": "4.3.8",
+    "symfony/http-foundation": "4.3.8",
+    "symfony/mime": "4.3.8"
   },
   "autoload": {
     "psr-4": {
@@ -34,6 +37,9 @@
     }
   },
   "config": {
+    "platform": {
+      "php": "7.1.27"
+    },
     "preferred-install": {
       "*": "dist"
     },
