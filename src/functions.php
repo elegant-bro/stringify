@@ -10,6 +10,7 @@ namespace ElegantBro\Stringify;
 
 use ElegantBro\Interfaces\Stringify;
 use Exception;
+use LogicException;
 
 /**
  * @param Stringify $stringify
@@ -19,4 +20,17 @@ use Exception;
 function raw(Stringify $stringify): string
 {
     return $stringify->asString();
+}
+
+/**
+ * @param $scalar
+ * @return Stringify
+ */
+function just($scalar): Stringify
+{
+    if (!is_scalar($scalar)) {
+        throw new LogicException('Only scalar required');
+    }
+
+    return new Just((string)$scalar);
 }
