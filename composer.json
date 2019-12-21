@@ -20,7 +20,7 @@
   },
   "require-dev": {
     "ext-simplexml": "*",
-    "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0 || ^8.0",
+    "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0",
     "symplify/easy-coding-standard": "^6.0"
   },
   "autoload": {
