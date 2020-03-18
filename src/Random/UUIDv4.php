@@ -12,6 +12,8 @@ use ElegantBro\Interfaces\Stringify;
 use ElegantBro\Stringify\Cached;
 use ElegantBro\Stringify\FromCallable;
 use Exception;
+use function random_int;
+use function sprintf;
 
 final class UUIDv4 implements Stringify
 {
