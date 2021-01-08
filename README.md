@@ -1,8 +1,9 @@
 [![Build Status](https://travis-ci.com/elegant-bro/stringify.svg?branch=master)](https://travis-ci.com/elegant-bro/stringify)
-# Work with strings in elegant way
+[![Coverage Status](https://coveralls.io/repos/github/elegant-bro/stringify/badge.svg?branch=master)](https://coveralls.io/github/elegant-bro/stringify?branch=master)
 
-`Stringify` interface gives ability to any objects to represent them as string. This library contains the most useful 
-functionality for string manipulation from PHP organized in objects. You can compose them in elegant way.
+# Work with strings in an elegant way
+
+`Stringify` interface gives the ability to any objects to represent them as a string. This library contains the most useful functionality for string manipulation from PHP organized in objects. You can compose them in an elegant way.
 
 ## Examples
 
@@ -31,7 +32,7 @@ $connection->execute(
 );
 ```
 
-Nothing special in example above, where is magic?
+Nothing special in the example above, where is magic?
 
 ```php
 <?php
@@ -132,17 +133,35 @@ $connection->execute(
 );
 ```
 
-This is very simple example but it reflects the common idea. By this approach you can create some kind of query
-builder but in elegant declarative way.
+This is a very simple example, but it reflects the common idea. By this approach, you can create some kind of query
+builder but in an elegant declarative way.
 
-# Tests
-Install dependencies
+## For contributors
 
-`docker run --rm -ti -v $PWD:/app composer install`
+**Pass all tests locally before creating the pull a request.**
 
-Run tests
+Build the test container and run all tests
+```shell
+make all
+```
 
-`docker run --rm -ti -v $PWD:/app -w /app php:7.1-cli-alpine vendor/bin/phpunit`
+Other commands
+```shell
+# build the Dockerfile
+make build 
 
-Test code style
-`docker run --rm -ti -v $(pwd):/app -w /app php:7.1-cli-alpine vendor/bin/ecs --level psr12 check src`
+# install composer requirements
+make install
+
+# enter the container shell
+make shell
+
+# style check
+make style-check
+
+# run unit tests
+make unit
+
+# ensure coverage is 100%
+make coverage
+```
