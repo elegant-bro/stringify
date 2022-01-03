@@ -14,14 +14,14 @@
     }
   ],
   "require": {
-    "php": "^7.1",
+    "php": ">=7.1",
     "ext-json": "*",
     "elegant-bro/interfaces": "^1.0.0"
   },
   "require-dev": {
     "ext-simplexml": "*",
     "php-coveralls/php-coveralls": "^2.4",
-    "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0",
+    "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0 || 8.*",
     "symplify/easy-coding-standard": "^6.0"
   },
   "autoload": {
