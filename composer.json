@@ -21,8 +21,8 @@
   "require-dev": {
     "ext-simplexml": "*",
     "php-coveralls/php-coveralls": "^2.4",
-    "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0",
-    "symplify/easy-coding-standard": "^6.0"
+    "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0 || ^9.5",
+    "symplify/easy-coding-standard": "^9.4.9"
   },
   "autoload": {
     "files": ["src/functions.php"],
@@ -36,9 +36,6 @@
     }
   },
   "config": {
-    "platform": {
-      "php": "7.1.27"
-    },
     "preferred-install": {
       "*": "dist"
     },
