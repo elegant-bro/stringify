@@ -42,6 +42,7 @@ class SymbolsTest extends TestCase
                 10
             ))->asString());
         $this->assertMatchesRegularExpression('/(^[АБВГ9876]{10})$/u', $value);
+        explode()
     }
 
     /**
