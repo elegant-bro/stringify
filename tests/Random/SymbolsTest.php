@@ -24,7 +24,7 @@ class SymbolsTest extends TestCase
                 new Alphabet(['A','B','C','D','1','2','3']),
                 5)
             )->asString());
-        $this->assertRegExp('/(^[ABCD123]{5})$/u', $value);
+        $this->assertMatchesRegularExpression('/(^[ABCD123]{5})$/u', $value);
     }
 
     /**
@@ -41,7 +41,7 @@ class SymbolsTest extends TestCase
                 new Alphabet(['А','Б','В','Г','9','8','7','6']),
                 10
             ))->asString());
-        $this->assertRegExp('/(^[АБВГ9876]{10})$/u', $value);
+        $this->assertMatchesRegularExpression('/(^[АБВГ9876]{10})$/u', $value);
     }
 
     /**
@@ -58,7 +58,7 @@ class SymbolsTest extends TestCase
                 new Alphabet(['😀', '😁', '😂', '🤣', '😃', '😄', 'G', 'H', 'J', 'K']),
                 5
             ))->asString());
-        $this->assertRegExp('/(^[👌😁😂🤣😃😄GHJK]{16})$/u', $value);
+        $this->assertMatchesRegularExpression('/(^[👌😁😂🤣😃😄GHJK]{16})$/u', $value);
     }
 
     /**

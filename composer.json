@@ -14,15 +14,15 @@
     }
   ],
   "require": {
-    "php": "^7.1",
+    "php": "^7.1 || ^8.0",
     "ext-json": "*",
     "elegant-bro/interfaces": "^1.0.0"
   },
   "require-dev": {
     "ext-simplexml": "*",
     "php-coveralls/php-coveralls": "^2.4",
-    "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0",
-    "symplify/easy-coding-standard": "^6.0"
+    "phpunit/phpunit": "^9.5",
+    "symplify/easy-coding-standard": "^10.0"
   },
   "autoload": {
     "files": ["src/functions.php"],
@@ -36,9 +36,6 @@
     }
   },
   "config": {
-    "platform": {
-      "php": "7.1.27"
-    },
     "preferred-install": {
       "*": "dist"
     },
