@@ -12,9 +12,6 @@ use ElegantBro\Interfaces\Stringify;
 
 final class Blank implements Stringify
 {
-    /**
-     * @return string
-     */
     public function asString(): string
     {
         return '';

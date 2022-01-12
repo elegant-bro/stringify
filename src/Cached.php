@@ -36,7 +36,6 @@ final class Cached implements Stringify
 
     /**
      * @throws Exception
-     * @return string
      */
     public function asString(): string
     {

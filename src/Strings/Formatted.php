@@ -30,7 +30,6 @@ final class Formatted implements Stringify
     }
 
     /**
-     * @return string
      * @throws Exception
      */
     public function asString(): string

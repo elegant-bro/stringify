@@ -37,7 +37,6 @@ final class Joined implements Stringify
     }
 
     /**
-     * @return string
      * @throws Exception
      */
     public function asString(): string

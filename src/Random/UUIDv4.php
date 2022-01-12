@@ -45,7 +45,6 @@ final class UUIDv4 implements Stringify
 
     /**
      * @throws Exception
-     * @return string
      */
     public function asString(): string
     {

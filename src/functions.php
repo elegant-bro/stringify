@@ -13,8 +13,6 @@ use Exception;
 use LogicException;
 
 /**
- * @param Stringify $stringify
- * @return string
  * @throws Exception
  */
 function raw(Stringify $stringify): string
@@ -24,13 +22,12 @@ function raw(Stringify $stringify): string
 
 /**
  * @param $scalar
- * @return Stringify
  */
 function just($scalar): Stringify
 {
-    if (!is_scalar($scalar)) {
+    if (! is_scalar($scalar)) {
         throw new LogicException('Only scalar required');
     }
 
-    return new Just((string)$scalar);
+    return new Just((string) $scalar);
 }

@@ -35,9 +35,7 @@ final class Replaced implements Stringify
         $this->subject = $subject;
     }
 
-
     /**
-     * @return string
      * @throws Exception
      */
     public function asString(): string

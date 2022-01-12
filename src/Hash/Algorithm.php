@@ -33,13 +33,12 @@ final class Algorithm implements Stringify
     }
 
     /**
-     * @return string
      * @throws Exception
      */
     public function asString(): string
     {
         $str = $this->algo->asString();
-        if (!in_array($str, hash_algos(), true)) {
+        if (! in_array($str, hash_algos(), true)) {
             throw new InvalidArgumentException('Unsupported algo ' . $str);
         }
 

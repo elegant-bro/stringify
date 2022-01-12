@@ -36,20 +36,17 @@ final class SubOf implements Stringify
         $this->length = $length;
     }
 
-
     /**
-     * @return string
      * @throws Exception
      */
     public function asString(): string
     {
-        return
-            false === (
-                $sub =
+        return false === (
+            $sub =
                 0 === $this->length ?
                     substr($this->str->asString(), $this->start) :
                     substr($this->str->asString(), $this->start, $this->length)
-            ) ? '' : $sub
+        ) ? '' : $sub
         ;
     }
 }

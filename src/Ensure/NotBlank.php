@@ -26,7 +26,6 @@ final class NotBlank implements Stringify
 
     /**
      * @throws Exception
-     * @return string
      */
     public function asString(): string
     {

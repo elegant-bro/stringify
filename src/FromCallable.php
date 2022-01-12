@@ -19,7 +19,6 @@ final class FromCallable implements Stringify
 
     /**
      * @throws Exception
-     * @return string
      */
     public function asString(): string
     {

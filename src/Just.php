@@ -22,9 +22,6 @@ final class Just implements Stringify
         $this->value = $value;
     }
 
-    /**
-     * @return string
-     */
     public function asString(): string
     {
         return $this->value;
