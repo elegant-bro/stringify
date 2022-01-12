@@ -16,7 +16,7 @@ install-no-dev:
 	$(docker) composer install --no-dev
 
 style-check:
-	$(docker) vendor/bin/ecs --level psr12 check src
+	$(docker) vendor/bin/ecs check src
 
 unit:
 	$(docker) -dzend_extension=xdebug.so -dxdebug.mode=coverage vendor/bin/phpunit
